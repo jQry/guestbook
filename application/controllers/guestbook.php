@@ -15,8 +15,8 @@
 					$key = "AIzaSyCO5lIc_Jlrey0aroqf1cHXVF1MUXLNuR0";
 					$dur = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=".$video_id."&key=".$key);
 					$data = json_decode($dur, true);
-					echo $title = $data['items'][0]['snippet']['title'];
-					echo $desc = $data['items'][0]['snippet']['description'];
+					$title = $data['items'][0]['snippet']['title'];
+					$desc = $data['items'][0]['snippet']['description'];
 
 					$link = getYoutubeEmbedUrl($share_video);
 
